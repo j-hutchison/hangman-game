@@ -1,5 +1,5 @@
 :root {
-	--color-white: #fff;
+	--color-bg: #rgb(51, 59, 97);
 	--color-white-bg: rgb(235, 235, 235);
 	--color-navy: rgb(52, 82, 253);
 }
@@ -19,6 +19,8 @@ html {
 }
 
 body {
+	background-color: rgb(51, 59, 97);
+	color: #fff;
 }
 
 *:focus {
@@ -26,4 +28,54 @@ body {
 }
 
 .app {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	padding: 4rem 0;
+	text-align: center;
+
+	gap: 6rem;
+}
+
+.app > header {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.primary-heading {
+	font-size: 3.2rem;
+}
+.primary-description {
+	font-size: 1.8rem;
+}
+.game {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	width: 80%;
+
+	gap: 5rem;
+}
+.game-presentation {
+	display: flex;
+	gap: 4rem;
+	justify-content: center;
+	width: inherit;
+}
+.game-wrong-letters > h2 {
+	margin-bottom: 1rem;
+}
+.game-answer {
+}
+.game-answer-letter {
+	border-bottom: 2px solid blue;
+	font-size: 2.4rem;
+	padding: 1rem;
+	margin-right: 1rem;
+}
+.game-answer-letter.hidden {
+	color: transparent;
 }
