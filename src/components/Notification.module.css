@@ -1,0 +1,30 @@
+.notification {
+	position: absolute;
+	top: calc(100% + 10rem);
+	opacity: 0;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	background-color: rgba(0, 0, 0, 0.2);
+	color: #fff;
+	padding: 2rem 4rem;
+}
+
+.show {
+	transform: translateY(-8.5rem);
+	opacity: 1;
+	transition: all 0.4s;
+}
+
+.hide {
+	transform: translateY(8.5rem);
+	opacity: 0;
+	transition: all 0.4s;
+}
+
+.notification-message {
+	display: inline-block;
+	color: #fff;
+	font-weight: 500;
+
+	font-size: 1.8rem;
+}

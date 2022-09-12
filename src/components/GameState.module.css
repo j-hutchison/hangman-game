@@ -1,0 +1,44 @@
+.gamestate {
+	background-color: rgba(26, 83, 170, 1);
+	padding: 3rem 6rem;
+	font-size: 2.4rem;
+	border-radius: 10px;
+	box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+
+	display: flex;
+	flex-direction: column;
+	gap: 5rem;
+
+	position: absolute;
+
+	top: 50%;
+	transform: translateY(-50%);
+
+	opacity: 0;
+}
+
+button {
+	display: inline-block;
+	margin: 0 auto;
+	width: 30%;
+
+	padding: 1rem 2rem;
+	border: none;
+	border-radius: 5px;
+	color: rgba(26, 83, 170, 1);
+
+	text-transform: uppercase;
+	font-size: 1.6rem;
+}
+
+.show {
+	opacity: 1;
+	transition: all 0.3s;
+	z-index: 9999;
+}
+
+.hide {
+	opacity: 0;
+	transition: all 0.3s;
+	z-index: -1;
+}

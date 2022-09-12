@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useCallback, useMemo } from "react";
-import styles from "./canvas.module.css";
+import styles from "./Canvas.module.css";
 
 const Canvas = ({ wrongGuesses }) => {
 	const canvasRef = useRef(null);
@@ -85,6 +85,12 @@ const Canvas = ({ wrongGuesses }) => {
 		ctx.stroke();
 	};
 
+	const clearCanvas = (canvas) => {
+		const context = canvas.getContext("2d");
+		context.clearRect(0, 0, canvas.width, canvas.height);
+		drawFrame(context);
+	};
+
 	useEffect(() => {
 		const canvas = canvasRef.current;
 		const context = canvas.getContext("2d");
@@ -92,13 +98,6 @@ const Canvas = ({ wrongGuesses }) => {
 		context.lineWidth = LINE_WIDTH;
 
 		drawFrame(context);
-
-		// drawHead(context);
-		// drawBody(context);
-		// drawLeftArm(context);
-		// drawRightArm(context);
-		// drawLeftLeg(context);
-		// drawRightLeg(context);
 	}, [drawFrame]);
 
 	useEffect(() => {
@@ -127,6 +126,8 @@ const Canvas = ({ wrongGuesses }) => {
 				console.log(`You Lose!`);
 				break;
 			default:
+				clearCanvas(canvas);
+
 				console.log(`Let's Go!`);
 		}
 	}, [wrongGuesses]);

@@ -1,0 +1,6 @@
+.game-wrong-letters > h2 {
+	margin-bottom: 1rem;
+}
+.game-wrong-letters > span {
+	font-size: 1.6rem;
+}

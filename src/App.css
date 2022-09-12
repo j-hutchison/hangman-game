@@ -28,6 +28,7 @@ body {
 }
 
 .app {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -36,6 +37,8 @@ body {
 	text-align: center;
 
 	gap: 6rem;
+
+	height: 100%;
 }
 
 .app > header {
@@ -49,12 +52,6 @@ body {
 	font-size: 3.6rem;
 }
 
-.primary-heading {
-	font-size: 3.2rem;
-}
-.primary-description {
-	font-size: 1.8rem;
-}
 .game {
 	display: flex;
 	flex-direction: column;
@@ -69,12 +66,6 @@ body {
 	gap: 4rem;
 	justify-content: center;
 	width: inherit;
-}
-.game-wrong-letters > h2 {
-	margin-bottom: 1rem;
-}
-.game-wrong-letters > span {
-	font-size: 1.6rem;
 }
 .game-answer {
 }
